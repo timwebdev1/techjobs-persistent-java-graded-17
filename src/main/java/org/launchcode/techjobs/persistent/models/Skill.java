@@ -8,7 +8,7 @@ import jakarta.validation.constraints.Size;
 public class Skill extends AbstractEntity {
 
     @ManyToMany(mappedBy = "skills")
-    private Job job;
+    private Job jobs;
 
     public Skill(){}
 
@@ -24,10 +24,10 @@ public class Skill extends AbstractEntity {
     }
 
     public Job getJob() {
-        return job;
+        return jobs;
     }
 
     public void setJob(Job job) {
-        this.job = job;
+        this.jobs = jobs;
     }
 }
